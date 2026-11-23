@@ -75,6 +75,14 @@ class HelperTest < Minitest::Test
     assert_raises(ArgumentError) { @view.model_icon_tag(:claude, css_class: {}) }
   end
 
+  def test_unknown_names_do_not_skip_option_validation
+    ["unknown", nil, "../claude"].each do |name|
+      assert_raises(ArgumentError) { @view.model_icon_tag(name, size: "bad") }
+      assert_raises(ArgumentError) { @view.model_icon_tag(name, css_class: {}) }
+      assert_nil @view.model_icon_tag(name, size: 32, css_class: "shrink-0")
+    end
+  end
+
   def test_inventory_is_fixed_and_immutable
     assert_equal %w[aws claude nova openai], Parkes::ModelIcons::NAMES
     icon = Parkes::ModelIcons.fetch(:aws)

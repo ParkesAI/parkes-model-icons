@@ -37,6 +37,8 @@ unknown name. Exact lowercase strings and symbols are accepted; there is no alia
 case conversion or path interpretation. `size` is an integer from 1 to 1024, applied
 to width and height. `css_class` is a string or nil and is always attribute-escaped,
 even when the string was marked HTML-safe. Other keyword arguments are rejected.
+Invalid options raise `ArgumentError` even for unknown names; valid options still
+allow an unknown name to return `nil` for the application's neutral fallback.
 
 All paths use `currentColor`; set `color` on the surrounding text/container in each
 theme. Keep the icon from shrinking with the application's layout class. The helper
@@ -111,8 +113,8 @@ response bytes. It never needs the Console database. `RAILS_VERSION` selects the
 framework constraint; install that bundle before running its compatibility test.
 
 See [CONTRIBUTING](CONTRIBUTING.md), [release preparation](docs/RELEASING.md),
-[provenance](upstream.json) and [CHANGELOG](CHANGELOG.md). The CI configuration is
-currently a template under `ci/`, not an installed/green GitHub workflow.
+[provenance](upstream.json) and [CHANGELOG](CHANGELOG.md). The installed
+[CI workflow](.github/workflows/ci.yml) runs compatibility and provenance checks.
 
 ## Licensing
 

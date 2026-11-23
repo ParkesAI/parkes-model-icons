@@ -60,7 +60,10 @@ Dir.mktmpdir("model-icons-compatibility-") do |app|
     "BUNDLE_APP_CONFIG" => File.join(app, ".bundle"),
     "RAILS_ENV" => "production"
   }
-  run!(env, RbConfig.ruby, "-S", "bundle", "install", "--local", "--quiet", chdir: app)
+  # The parent bundle may live in a private path (for example setup-ruby's
+  # vendor/bundle), which is intentionally absent from this unbundled process.
+  # Resolve dependencies normally; the gem under test is still installed locally.
+  run!(env, RbConfig.ruby, "-S", "bundle", "install", "--quiet", chdir: app)
   run!(env, RbConfig.ruby, "-S", "bundle", "exec", "rake", "assets:precompile", chdir: app)
   run!(env.merge("ICON_PACKAGE_ROOT" => root), RbConfig.ruby, "-S", "bundle", "exec", "ruby", File.join(__dir__, "verify_assets.rb"), chdir: app)
 end
