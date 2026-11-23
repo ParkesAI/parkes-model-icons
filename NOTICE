@@ -1,0 +1,19 @@
+Parkes Model Icons
+Rails wrapper maintained by Parkes contributors, distributed under MIT (LICENSE).
+
+Artwork: Lobe Icons by LobeHub and contributors.
+https://github.com/lobehub/lobe-icons
+Copyright (c) 2023 LobeHub
+
+Selected original SVG bytes from @lobehub/icons-static-svg 1.106.0 are distributed
+under MIT. The complete upstream copyright and permission notice is preserved
+in vendor/upstream/LICENSE. The upstream package metadata is preserved in
+vendor/upstream/package.json. upstream.json records the source revision, source
+URLs, package checksum and individual file checksums. Original SVGs are unchanged;
+the Rails helper reconstructs their vetted paths without titles, styles or fixed
+sizes for decorative inline use.
+
+Company, provider and model names and logos are trademarks of their respective
+owners. These software licenses do not grant trademark rights or imply endorsement
+by those owners or by LobeHub. No affiliation is claimed. The MIT license is
+LobeHub's declared license for its artwork package, not a license to the brands.
