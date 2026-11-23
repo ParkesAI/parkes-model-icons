@@ -1,0 +1,25 @@
+{
+  "package": "@lobehub/icons-static-svg",
+  "version": "1.106.0",
+  "repository": "https://github.com/lobehub/lobe-icons",
+  "revision": "c9236c6735763f2778e7ca759488f9a486450249",
+  "revision_source": "npm registry gitHead for version 1.106.0",
+  "tarball": "https://registry.npmjs.org/@lobehub/icons-static-svg/-/icons-static-svg-1.106.0.tgz",
+  "tarball_sha256": "fb1900cf0cfddf6a5ef947db57f951335602ad422bffff03ba9dc31390572b34",
+  "license_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/c9236c6735763f2778e7ca759488f9a486450249/LICENSE",
+  "license": "MIT",
+  "icons": [
+    "aws",
+    "claude",
+    "nova",
+    "openai"
+  ],
+  "sha256": {
+    "app/assets/images/model_icons/aws.svg": "f73f2506defea5df3b064bcea998339e183c4f979b2bb4af4fcbf42c29ae151c",
+    "app/assets/images/model_icons/claude.svg": "365a70a7eb3956d9b9a96086058ebe04e1dbd8e291a756ad964e8a283fbd6d38",
+    "app/assets/images/model_icons/nova.svg": "e40ce8c78056db1b0fe3ed2849a895b5bb8b9bba2fbc83fb8a5fcf915c24a37d",
+    "app/assets/images/model_icons/openai.svg": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186",
+    "vendor/upstream/LICENSE": "add9d7531d1b21646317a8958e38fc727506fa39d24bdecb44154d943c82753a",
+    "vendor/upstream/package.json": "511dee31f674a58cbea8b11f46eb341e6b572ab4d01d9070137e5b9d52ea5c49"
+  }
+}
